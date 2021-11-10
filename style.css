@@ -1,0 +1,39 @@
+html, body {
+    margin: 0px;
+}
+
+.centered {
+    margin-left: 20%;
+    margin-right: 20%;
+    width: 60%;
+    text-align: center;
+}
+
+.player-card {
+    width: 10%;
+    display: inline-block;
+    margin: 2%;
+}
+
+.player-card input {
+    width: 100%;
+}
+
+#section-operator-selector table {
+    table-layout: fixed;
+    width: 100%;
+}
+
+#section-operator-selector button {
+    width: 100%;
+    height: 100%;
+}
+
+#section-operator-selector img {
+    width: 50%;
+    height: 50%;
+}
+
+.invisible {
+    display: none;
+}

@@ -4,12 +4,76 @@
     <link rel="stylesheet" href="style.css">
     <script src="logic.js"></script>
 </head>
-<body>
-    <div id="section-round-selector">round selector</div>
-    <div id="section-mode-selector">mode selector</div>
-    <div id="section-player-selector">player selector</div>
-    <div id="section-operator-selector">operator selector</div>
-    <div id="section-controls">section controls</div>
-    <div id="section-footer">footer</div>
+<body onload="init()">
+    <div id="section-round-selector" class="centered">
+        <button id="round-selector-prev">Previous Match</button>
+        <span id="round-selector-display">Match 1</span>
+        <button id="round-selector-next">Next Match</button>
+    </div>
+    <div id="section-mode-selector" class="centered">
+        <button id="mode-selector-attack">Attack</button>
+        <button id="mode-selector-defense">Defense</button>
+    </div>
+    <div id="section-player-selector" class="centered">
+        <datalist id="player-names">
+            <option value="Rando">Rando</option>
+        </datalist>
+        <!-- Template for JS duplication -->
+        <span id="player-display-1" class="player-card">
+            <input type="text" id="player-name-1" name="player-name-1"
+                list="player-names">
+            <!-- TODO: Show the player portrait unless hovering over player -->
+            <img id="player-portrait-1"
+                src="img/outbreakrecruit_red.svg" alt="Random">
+            <!-- TODO: Hide the player history unless hovering over player -->
+            <table id="player-history-1" class="invisible">
+                <thead>
+                    <tr><th>Attack</th><th>Defense</th></tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </span>
+    </div>
+    <div id="section-operator-selector" class="centered">
+        <table id="attack-operators">
+            <tr>
+                <td>
+                    <button id="op-atk-recruit">
+                        <div><img src="img/recruit_blue.svg" alt="Recruit"></div>
+                        <div>Recruit</div>
+                    </button>
+                </td>
+                <td>
+                    <button id="op-atk-random">
+                        <div><img src="img/outbreakrecruit_red.svg" alt="Random"></div>
+                        <div>Random</div>
+                    </button>
+                </td>
+            </tr>
+        </table>
+        <table id="defense-operators" class="invisible">
+            <tr>
+                <td>
+                    <button id="op-atk-recruit">
+                        <div><img src="img/recruit_blue.svg" alt="Recruit"></div>
+                        <div>Recruit</div>
+                    </button>
+                </td>
+                <td>
+                    <button id="op-atk-random">
+                        <div><img src="img/outbreakrecruit_red.svg" alt="Random"></div>
+                        <div>Random</div>
+                    </button>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div id="section-controls" class="centered">
+        <button id="control-randomize">Randomize</button>
+        <button id="control-next">Next Match</button>
+    </div>
+    <div id="section-footer" class="centered">footer</div>
 </body>
 </html>
