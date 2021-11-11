@@ -11,8 +11,10 @@
         <button id="round-selector-next">Next Round</button>
     </div>
     <div id="section-mode-selector" class="centered">
-        <button id="mode-selector-attack">Attack</button>
-        <button id="mode-selector-defense">Defense</button>
+        <button id="mode-selector-attack" onclick="set_mode(true)">
+            Attack</button>
+        <button id="mode-selector-defense" onclick="set_mode(false)">
+            Defense</button>
     </div>
     <div id="section-player-selector" class="centered">
         <datalist id="player-names">

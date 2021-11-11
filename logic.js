@@ -56,3 +56,16 @@ function fill_ops(ops, table, label) {
         table.appendChild(table_row)
     }
 }
+
+function set_mode(attack) {
+    let attack_table = document.getElementById('attack-operators')
+    let defense_table = document.getElementById('defense-operators')
+    if (attack) {
+        attack_table.classList.remove('invisible')
+        defense_table.classList.add('invisible')
+    } else {
+        attack_table.classList.add('invisible')
+        defense_table.classList.remove('invisible')
+    }
+}
+
