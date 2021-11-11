@@ -24,7 +24,22 @@ function init() {
     for (let i = 2; i <= num_players; i++)
     {
         let next = player_templ.cloneNode(true)
-        // TODO: differentiate node ids
+        // differentiate card properties
+        next.id = 'player-display-' + i
+        next.onmouseenter = () => hover_player_card(i, true)
+        next.onmouseleave = () => hover_player_card(i, false)
+        next.onclick = () => click_player_card(i)
+        // differentiate input properties
+        let nextinput = next.querySelector('input')
+        nextinput.id = 'player-name-' + i
+        nextinput.name = 'player-name-' + i
+        // differentiate portrait properties
+        next.querySelector('img').id = 'player-portrait-' + i
+        // differentiate history properties
+        next.querySelector('table').id = 'player-history-' + i
+        for (cell of next.querySelectorAll('td')) {
+            cell.id = 'p' + i + cell.id.substring(2)
+        }
         player_display.appendChild(next)
     }
     // Populate operator lists
