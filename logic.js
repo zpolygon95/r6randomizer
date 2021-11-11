@@ -29,14 +29,20 @@ function init() {
     }
     // Populate operator lists
     let attack_table = document.getElementById('attack-operators')
-    for (row of attack_ops) {
+    fill_ops(attack_ops, attack_table, 'atk')
+    let defense_table = document.getElementById('defense-operators')
+    fill_ops(defense_ops, defense_table, 'def')
+}
+
+function fill_ops(ops, table, label) {
+    for (row of ops) {
         let table_row = document.createElement('tr')
         for (op of row) {
             let cell = document.createElement('td')
             let btn = document.createElement('button')
             let s1 = document.createElement('div')
             let s2 = document.createElement('div')
-            btn.id = 'op-atk-' + op
+            btn.id = 'op-' + label + '-' + op
             let img = document.createElement('img')
             img.src = 'img/' + op + '.svg'
             img.alt = op
@@ -47,6 +53,6 @@ function init() {
             cell.appendChild(btn)
             table_row.appendChild(cell)
         }
-        attack_table.appendChild(table_row)
+        table.appendChild(table_row)
     }
 }
