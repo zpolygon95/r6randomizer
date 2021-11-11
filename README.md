@@ -1,5 +1,7 @@
 # R6 Randomizer #
 
+Warning: This is super broken and not yet ready for use
+
 Among [the tweaks and improvements in Y6S4][1] of Tom Clancy's Rainbow 6 Siege,
 the chaos of AFK randomization was removed:
 
