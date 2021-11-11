@@ -21,7 +21,10 @@
             <option value="Rando">Rando</option>
         </datalist>
         <!-- Template for JS duplication -->
-        <span id="player-display-1" class="player-card">
+        <span id="player-display-1" class="player-card"
+        onmouseenter="hover_player_card(1, true)"
+        onmouseleave="hover_player_card(1, false)"
+        onclick="click_player_card(1)">
             <input type="text" id="player-name-1" name="player-name-1"
                 list="player-names">
             <!-- TODO: Show the player portrait unless hovering over player -->

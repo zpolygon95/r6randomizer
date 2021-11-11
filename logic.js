@@ -69,3 +69,20 @@ function set_mode(attack) {
     }
 }
 
+function hover_player_card(player, activate) {
+    console.log('hover player card ' + player + ' ' + activate);
+    let portrait = document.getElementById('player-portrait-' + player)
+    let history = document.getElementById('player-history-' + player)
+    if (activate) {
+        portrait.classList.add('invisible')
+        history.classList.remove('invisible')
+    } else {
+        portrait.classList.remove('invisible')
+        history.classList.add('invisible')
+    }
+}
+
+function click_player_card(player) {
+    console.log('click player card ' + player);
+}
+
